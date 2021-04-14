@@ -17,14 +17,14 @@ void TimedDoor::unlock() {
 
 void TimedDoor::lock() { opened = false; }
 
-void TimedDoor::DoorTimeOut() const { throw std::string("close this door!"); }
+void TimedDoor::DoorTimeOut() const { throw std::string("close the door!"); }
 
 void TimedDoor::throwState() {
   if (opened) {
     std::string str1 = "the door is opened!";
     throw(str1);
   } else {
-    std::string str2 = "close this door!";
+    std::string str2 = "the door is closed!";
     throw(str2);
   }
 }
